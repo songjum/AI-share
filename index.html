@@ -1156,16 +1156,30 @@
             <div class="section-title">🔧 2.3 Function Call和MCP概念</div>
             
             <div class="subsection">
-                <div class="subsection-title">🛠️ Function Call：让AI调用外部工具</div>
+                <div class="subsection-title">🛠️ Function Call：让AI调用外部工具的第一代技术</div>
                 <div class="analogy-box">
                     <p>给AI装上"手脚"，不仅能思考，还能动手操作</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">原理</div>
+                    <div class="timeline-year">发展历程</div>
                     <div class="timeline-content">
-                        <div class="timeline-title">AI理解工具描述，自动选择和调用合适的工具</div>
-                        <div class="core-point">🎯 就像人类看说明书学会使用新工具一样</div>
+                        <div class="timeline-title">2023年6月OpenAI随GPT-4推出，现已成为AI应用的基础能力</div>
+                        <div class="core-point">🎯 从实验室概念到产业标准，开启AI工具连接新时代</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">核心特征</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">四大技术特点</div>
+                        <div class="keywords">
+                            <span class="keyword">模型中心化架构</span>
+                            <span class="keyword">同步请求-响应</span>
+                            <span class="keyword">静态预定义函数</span>
+                            <span class="keyword">JSON Schema接口</span>
+                        </div>
+                        <div class="core-point">⚡ 平均延迟<500ms，API Key鉴权，开发时确定所有可用工具</div>
                     </div>
                 </div>
             </div>
@@ -1173,22 +1187,19 @@
 
         <!-- 2.3 续 Function Call应用案例 -->
         <div class="slide" id="slide7-1">
-            <div class="section-title">🔧 Function Call 本质与应用</div>
+            <div class="section-title">🔧 Function Call 应用场景与能力边界</div>
             
             <div class="subsection">
-                <div class="subsection-title">本质理解</div>
-                <div class="analogy-box">
-                    <p> Function Call是让AI能够智能地调用各种工具和接口，并将这些调用有机地整合到推理和对话过程中，从而扩展AI的能力边界</p>
-                </div>
+                <div class="subsection-title">应用场景</div>
                 <div class="timeline-item">
-                    <div class="timeline-year">能力</div>
+                    <div class="timeline-year">核心能力</div>
                     <div class="timeline-content">
                         <div class="timeline-title">AI可以调用任何有接口的系统和服务</div>
                         <div class="keywords">
-                            <span class="keyword">数据库接口</span>
-                            <span class="keyword">文件系统接口</span>
-                            <span class="keyword">第三方API</span>
-                            <span class="keyword">内部系统接口</span>
+                            <span class="keyword">数据查询：从数据库获取实时数据</span>
+                            <span class="keyword">文件操作：读写文件、生成报告</span>
+                            <span class="keyword">API调用：接入第三方服务</span>
+                            <span class="keyword">系统操作：发送邮件、创建任务</span>
                         </div>
                         <div class="core-point">🎯 只要有接口，AI就能调用</div>
                     </div>
@@ -1196,22 +1207,45 @@
             </div>
 
             <div class="subsection">
-                <div class="subsection-title">实际案例：自动生成销售周报</div>
+                <div class="subsection-title">典型优势与主要局限</div>
+                <div class="vs-comparison">
+                    <div class="vs-item">
+                        <h4>✅ 典型优势</h4>
+                        <div class="keywords">
+                            <span class="keyword">开发便捷（5分钟完成函数注册）</span>
+                            <span class="keyword">执行效率高</span>
+                            <span class="keyword">资源占用少</span>
+                            <span class="keyword">学习曲线平缓</span>
+                        </div>
+                    </div>
+                    <div class="vs-arrow">VS</div>
+                    <div class="vs-item">
+                        <h4>❌ 主要局限</h4>
+                        <div class="keywords">
+                            <span class="keyword">无法保持状态</span>
+                            <span class="keyword">工具间无法协作</span>
+                            <span class="keyword">复杂任务编排能力有限</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">实际案例：实时数据查询与分析</div>
                 <div class="analogy-box">
-                    <p><strong>用户说：</strong>"帮我生成本周销售报告"</p>
+                    <p><strong>用户说：</strong>"分析上周各区域销售额并找出表现最好的销售代表"</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">AI执行流程</div>
+                    <div class="timeline-year">Function Call执行流程</div>
                     <div class="timeline-content">
-                        <div class="timeline-title">AI自动调用多个接口完成任务</div>
+                        <div class="timeline-title">AI精准识别意图并调用特定函数</div>
                         <div class="keywords">
-                            <span class="keyword">1. 调用数据库接口查询数据</span>
-                            <span class="keyword">2. 调用分析接口处理数据</span>
-                            <span class="keyword">3. 调用图表接口生成可视化</span>
-                            <span class="keyword">4. 调用文档接口创建报告</span>
-                            <span class="keyword">5. 调用邮件接口发送报告</span>
+                            <span class="keyword">1. 识别查询意图 → 选择合适函数</span>
+                            <span class="keyword">2. 调用函数获取区域数据</span>
+                            <span class="keyword">3. 结构化返回JSON数据</span>
+                            <span class="keyword">4. AI解析数据并生成分析报告</span>
                         </div>
-                        <div class="core-point">💡 一句话触发，AI自动完成复杂的多接口调用</div>
+                        <div class="core-point">💡 无需预设对话流程，AI自动选择并调用最合适的函数</div>
                     </div>
                 </div>
             </div>
@@ -1219,107 +1253,119 @@
 
         <!-- 2.3 续 MCP概念详解 -->
         <div class="slide" id="slide7-2">
-            <div class="section-title">🌐 MCP：Function Call的全面升级</div>
+            <div class="section-title">🌐 MCP：下一代AI工具连接标准</div>
             
             <div class="subsection">
-                <div class="subsection-title">MCP在数据访问和文件处理方面的核心升级</div>
+                <div class="subsection-title">技术背景与架构革新</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">技术背景</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">2024年11月Anthropic发布，受LSP启发</div>
+                        <div class="keywords">
+                            <span class="keyword">2024年11月：Anthropic发布MCP协议</span>
+                            <span class="keyword">2025年3月：OpenAI、Google官方支持</span>
+                            <span class="keyword">受LSP（语言服务器协议）启发</span>
+                        </div>
+                        <div class="core-point">🎯 从单厂商私有实现到跨平台开放标准</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">架构革新</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">分布式客户端-服务器架构</div>
+                        <div class="keywords">
+                            <span class="keyword">异步双向通信</span>
+                            <span class="keyword">动态服务发现机制</span>
+                            <span class="keyword">Protocol Buffers 3.0</span>
+                            <span class="keyword">OAuth2.0 + RBAC权限</span>
+                        </div>
+                        <div class="core-point">⚡ 从模型中心化到分布式协作架构</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="subsection">
+                <div class="subsection-title">核心升级对比Function Call</div>
                 <div class="vs-comparison">
                     <div class="vs-item">
                         <h4>Function Call</h4>
-                        <p>单次无状态调用</p>
+                        <p>第一代工具调用技术</p>
                         <div class="keywords">
-                            <span class="keyword">数据发送到云端</span>
-                            <span class="keyword">无状态连接</span>
-                            <span class="keyword">各自定义格式</span>
+                            <span class="keyword">模型中心化架构</span>
+                            <span class="keyword">同步请求-响应</span>
+                            <span class="keyword">单次会话上下文</span>
+                            <span class="keyword">静态预定义函数</span>
                         </div>
                         <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>每次调用都是独立的，数据需要发送给AI服务商</p>
+                            <p>每次调用都是独立的，无法保持状态</p>
                         </div>
                     </div>
                     <div class="vs-arrow">→</div>
                     <div class="vs-item">
-                        <h4>MCP (本地优先协议)</h4>
-                        <p>有状态连接管理</p>
+                        <h4>MCP (下一代标准)</h4>
+                        <p>分布式工具协作协议</p>
                         <div class="keywords">
-                            <span class="keyword">数据保留本地</span>
-                            <span class="keyword">有状态会话</span>
-                            <span class="keyword">统一标准</span>
+                            <span class="keyword">分布式架构</span>
+                            <span class="keyword">异步双向通信</span>
+                            <span class="keyword">跨会话状态持久化</span>
+                            <span class="keyword">动态服务发现</span>
                         </div>
                         <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>保持连接状态，敏感数据不离开本地环境</p>
+                            <p>保持连接状态，支持复杂的多步骤操作</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="subsection">
-                <div class="subsection-title">MCP的四大核心升级</div>
-                <div class="concept-grid-4">
-                    <div class="concept-card">
-                        <h4>本地优先</h4>
+                <div class="subsection-title">交互模式对比</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Function Call</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">线性单步执行</div>
                         <div class="keywords">
-                            <span class="keyword">隐私保护</span>
-                            <span class="keyword">数据本地化</span>
+                            <span class="keyword">用户请求 → 模型解析 → 选择函数 → 同步执行 → 返回结果</span>
                         </div>
-                        <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>文件和数据库访问都在本地，不上传到云端</p>
-                        </div>
+                        <div class="core-point">🔗 简单直接，但无法处理复杂的多步骤协作</div>
                     </div>
-                    <div class="concept-card">
-                        <h4>有状态会话</h4>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">MCP</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">智能化协作流程</div>
                         <div class="keywords">
-                            <span class="keyword">连接保持</span>
-                            <span class="keyword">上下文延续</span>
+                            <span class="keyword">用户请求 → 上下文分析 → 工具发现 → 异步调用组合 → 结果整合 → 持续迭代</span>
                         </div>
-                        <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>可以维护数据库连接、文件句柄等状态</p>
-                        </div>
-                    </div>
-                    <div class="concept-card">
-                        <h4>实时流式</h4>
-                        <div class="keywords">
-                            <span class="keyword">流式传输</span>
-                            <span class="keyword">实时通知</span>
-                        </div>
-                        <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>支持文件变化监控、进度更新等</p>
-                        </div>
-                    </div>
-                    <div class="concept-card">
-                        <h4>精细权限</h4>
-                        <div class="keywords">
-                            <span class="keyword">沙盒访问</span>
-                            <span class="keyword">权限控制</span>
-                        </div>
-                        <div style="text-align: left; font-size: 0.9rem; margin-top: 10px;">
-                            <p>可以限制只访问特定目录或数据</p>
-                        </div>
+                        <div class="core-point">🤖 支持复杂任务的智能化分解与协作执行</div>
                     </div>
                 </div>
             </div>
 
             <div class="subsection">
-                <div class="subsection-title">实际应用场景对比</div>
+                <div class="subsection-title">应用价值与适用场景</div>
                 <div class="timeline-item">
-                    <div class="timeline-year">文件系统访问</div>
+                    <div class="timeline-year">应用价值</div>
                     <div class="timeline-content">
-                        <div class="timeline-title">Function Call vs MCP</div>
+                        <div class="timeline-title">MCP的核心价值</div>
                         <div class="keywords">
-                            <span class="keyword">Function Call：需要上传文件内容到AI服务</span>
-                            <span class="keyword">MCP：本地filesystem服务器，沙盒化访问</span>
+                            <span class="keyword">支持200+官方/社区插件（GitHub/K8s/Slack等）</span>
+                            <span class="keyword">跨会话记忆用户偏好和上下文状态</span>
+                            <span class="keyword">多工具并行调用和复杂任务编排</span>
+                            <span class="keyword">工具间数据传递和协作能力</span>
                         </div>
-                        <div class="core-point">🔒 MCP保护敏感文件不离开本地环境</div>
+                        <div class="core-point">🚀 从单一工具调用到智能协作生态</div>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">数据库查询</div>
+                    <div class="timeline-year">适用场景</div>
                     <div class="timeline-content">
-                        <div class="timeline-title">持久连接 vs 单次调用</div>
+                        <div class="timeline-title">技术选型指导</div>
                         <div class="keywords">
-                            <span class="keyword">Function Call：每次查询都是独立的</span>
-                            <span class="keyword">MCP：可以保持数据库连接和事务状态</span>
+                            <span class="keyword">简单任务：天气查询、汇率计算 → 仍用Function Call</span>
+                            <span class="keyword">复杂任务：多步骤数据分析、跨系统业务流程 → 采用MCP协议</span>
                         </div>
-                        <div class="core-point">💾 MCP支持复杂的多步骤数据库操作</div>
+                        <div class="core-point">🎯 根据任务复杂度选择合适的技术方案</div>
                     </div>
                 </div>
             </div>
